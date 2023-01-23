@@ -2,20 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 import { nanoid } from 'nanoid';
 
 ///////////////////////////////////////////////////////////
-export const valueSlise = createSlice({
-    name: "myValue",
-    initialState: 0,
-    reducers: {
-        increment(state, action) {
-            return state + action.payload;
-        },
-        decrement(state, action) {
-            return state - action.payload;
-        }
-    }
-});
-export const { increment, decrement } = valueSlise.actions;
-///////////////////////////////////////////////////////////
 const contactsInitialState = {items:[
     {id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
     {id: 'id-2', name: 'Hermione Kline', number: '443-89-12'},
@@ -51,12 +37,6 @@ export const filterSlice = createSlice({
         updFilter(state, action) {
             return (state = action.payload);
         },
-        changeFilter: (state, action) => {
-      state.contacts.filter = action.payload;
-        },
-        setFilter(state, action) {
-            state.splice(0,1,action.payload);
-        },
     }
 });
-export const {updFilter, changeFilter, setFilter} = filterSlice.actions;
+export const {updFilter} = filterSlice.actions;

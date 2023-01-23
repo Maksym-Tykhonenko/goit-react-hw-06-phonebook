@@ -1,6 +1,5 @@
-//import { useState, useEffect } from "react";
-import { increment, decrement } from '../redux/slice';
-import { useSelector, useDispatch } from 'react-redux';
+
+import { useSelector } from 'react-redux';
 
 
 //import { nanoid } from 'nanoid';
@@ -13,19 +12,11 @@ import { ContactList } from "./ContactList/ContactList";
 import {Block } from "./App.styled";
 
 export function App() {
-const dispatch = useDispatch();
-  const value = useSelector(state => state.value);
   
   const contacts = useSelector(state => state.contacts.items)
-////////////////////////////
+
     return (
       <Block>
-        <Section title='Caunter'>
-          <button onClick={()=> dispatch(decrement(1))}>-</button>
-            {value}
-        <button onClick={() => dispatch(increment(1))}>+</button>
-        </Section>
-        <hr />
         <Section title='Форма'>
             <Form />
         </Section>

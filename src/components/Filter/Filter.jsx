@@ -12,7 +12,7 @@ export const Filter = () => {
       console.log(query)
       dispatch(updFilter(query));
   };
-    ////////
+  
     return (
         <FiterInput
             onChange={onChange}

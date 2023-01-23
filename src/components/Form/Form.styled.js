@@ -6,10 +6,6 @@ export const FormInputs = styled.form`
 `;
 
 export const Btn = styled.button`
-    display: flex;
-    justify-content: center;
-    margin-left: 45%;
-    margin-top: 10px;
     width: 50px;
     height: 25px;
     border: 1px solid black;
